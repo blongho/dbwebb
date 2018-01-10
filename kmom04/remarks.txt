@@ -1,0 +1,4 @@
+Remarks on quesion 2.4: I am not sure if i solved the problem correctly but i had the answer.
+I just replaced the indices of the list with the desired values
+
+2.7: Confusing. I it hard to understand why that question was there 
