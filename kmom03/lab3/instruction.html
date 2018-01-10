@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Lab 3 - python</title>
+<style>
+body {
+    margin: 8px auto;
+    max-width: 700px;
+}
+
+div.answer {
+  font-family: "Courier New", monospace;
+  white-space: pre;
+  margin-bottom: 1em;
+}
+
+.fail {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+table, th, td {
+    border: 1px solid #666;
+}
+
+code {
+    background-color: #eee;
+    border: 1px solid #999;
+    padding: 1px;
+}
+
+pre code {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+</style>
+</head>
+<body>
+
+<pre>
+4c64a46eed6e708ab2c67000af803568
+python
+lab3
+v2
+lobe16
+2017-09-15 14:25:50
+v2.3.3 (2017-06-12)
+</pre>
+
+<p><i>Generated 2017-09-15 16:25:51 by <a href="https://github.com/mosbth/lab">dbwebb lab-utility</a> v2.3.3 (2017-06-12).</i></p>
+<hr>
+
+<h1>Lab 3 - python</h1>
+<p>In these exercises we will work with functions.</p>
+
+
+<h2>1. Functions</h2>
+
+
+
+<h3>Exercise 1.1 (1 points)</h3>
+<p>Create a function called <code>greeter</code> that returns <code>"Hi, the weather is nice today!"</code>.</p>
+
+<p>Answer with the return value from a call to the function.</p>
+
+
+
+
+
+
+<h3>Exercise 1.2 (1 points)</h3>
+<p>Assign the words: &#8216;pringles&#8217; and &#8216;lollipop&#8217; to two different variables.</p>
+
+<p>Create a function and pass the two words as arguments to it. Your function should return them as a single word.</p>
+
+<p>Answer with the result.</p>
+
+
+
+
+
+
+<h3>Exercise 1.3 (1 points)</h3>
+<p>Create a function called <code>funny_word</code> that takes one argument and prepends it to the string &#8217; is a funny word&#8217;. <strong>EXAMPLE:</strong> If the argument is &#8216;water&#8217;, the function should return: <code>"water is a funny word"</code>.</p>
+
+<p>Use the argument &#8216;beverage&#8217; and answer with a call to the function.</p>
+
+
+
+
+
+
+<h3>Exercise 1.4 (1 points)</h3>
+<p>Create a function called <code>summation</code> that takes two arguments. The function should return the sum of the two arguments.</p>
+
+<p>Answer with the return value from a call to the function with the two arguments 7 and 34.</p>
+
+
+
+
+
+
+<h3>Exercise 1.5 (1 points)</h3>
+<p>Create a function called <code>multiplication</code> that takes two arguments. The function should return the product of the two arguments.</p>
+
+<p>Answer with the return value from a call to the function with the two arguments 7 and 34.</p>
+
+
+
+
+
+
+<h3>Exercise 1.6 (1 points)</h3>
+<p>Create a function called <code>in_range</code> that takes one argument. The function should return <code>True</code> if the argument is higher than 50 and lower than 100. If the number is out of range, the function should return <code>False</code>. The return type should be boolean.</p>
+
+<p>Use the argument 98 and answer with a call to the function.</p>
+
+
+
+
+
+
+<h3>Exercise 1.7 (1 points)</h3>
+<p>Create a function called <code>multiplicator</code>. Inside the function create a loop that iterates from 4 to 15 (both included). For each number use the <code>multiplication</code> function from above to get the square of the current number. The function should return a comma-separated string of the squared numbers,  without an ending <code>,</code>.</p>
+
+<p>Answer with a call to the function <code>multiplicator</code>.</p>
+
+
+
+
+
+
+<h3>Exercise 1.8 (1 points)</h3>
+<p>Create a function called <code>squares_in_range</code>. Inside the function create a loop that iterates from 4 to 15 (both included). For each number use the <code>multiplication</code> function from above to get the square of the current number. Use the <code>in_range</code> function to check if the value is between 50 and 100. The function should return a comma-separated string of either <code>"Inside"</code> or <code>"Outside"</code>,  without an ending <code>,</code>. Use an if-statement to concatenate the strings to the return value.</p>
+
+<p>Answer with a call to the function <code>squares_in_range</code>.</p>
+
+
+
+
+
+
+<h3>Exercise 1.9 (1 points)</h3>
+<p>Create a function called <code>decider</code>. The function takes one argument. If the argument is a string return a call to <code>funny_word()</code>, if the argument is an integer return the square of the argument by using the <code>multiplication</code> function.</p>
+
+<p>Answer with a call to the function <code>decider</code> with the argument blunderbuss.</p>
+
+
+
+
+
+
+<h3>Exercise 1.10 (1 points)</h3>
+<p>Create a function called <code>double_decider</code>. The function takes two arguments. For each argument call the <code>decider</code> function. Concatenate the returned values in a string.</p>
+
+<p>Separate the two values by &#8217; and the square is &#8216;.</p>
+
+<p>Answer with a call to the function <code>double_decider</code> with the arguments: filibuster and 14.</p>
+
+
+
+
+
+
+
+<h2>2. Extra assignments</h2>
+<p>These questions are worth 3 points each. Solve them for extra points.</p>
+
+
+<h3>Exercise 2.1 (3 points)</h3>
+<p>Create a function that returns a binary string value of a given integer. Return only the binary number and not any identification that it is a binary number.</p>
+
+<p>Example: Calling the function with the number 3 should return <code>"11"</code>.</p>
+
+<p>Answer with a call to the function with the argument 98.</p>
+
+
+
+
+
+
+<h3>Exercise 2.2 (3 points)</h3>
+<p>Write a Python function that accepts a string and calculate the number of upper case letters and lower case letters. The function should return a string with the format &#8220;Lower case letters: #, upper case letters: #&#8221;. Only count letters, you can ignore space and special characters.</p>
+
+<p>Answer with a call to the function with the argument: <code>"Pack my Box with five dozen LiQuor juGs."</code>.</p>
+
+
+
+
+
+
+
+<hr>
+<code>4c64a46eed6e708ab2c67000af803568</code>
+
+</body>
+</html>
