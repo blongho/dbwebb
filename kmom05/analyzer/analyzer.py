@@ -124,13 +124,11 @@ def verbose_freq(idic, itm, n=7, rsort=True):
     """
 
     if rsort:
-        print(
-            "Showing data for the {} most frequent {} sorted in decending order.".format(n, itm))
+        print("Showing data for the {} most frequent {} sorted in decending" +
+              "order.".format(n, itm))
     else:
-        print(
-            "Showing data for {} {} frequency sorted in ascending order.".format(
-                n,
-                itm))
+        print("Showing data for {} {} frequency sorted in ascending" +
+              " order.".format(n, itm))
 
     if itm == "letters":
         print("{:<8} {:<8} {:<10}".format(itm, "count", "percent"))
@@ -166,23 +164,23 @@ def show_silent(command, filname, num=7):
     @param filname file to read data from
     @return Depending on the command, returns the required data
     """
-    info = ""
+    info = "\n'{f}' statistics \n:"
     stat = file_stats(filname)
     if command == "all":
-        info = "Letters: {let}\nWords: {w}\nLines: {lin}".format(
+        info += "Letters: {let}\nWords: {w}\nLines: {lin}".format(
             lin=stat["lines"],
             w=stat["words"],
             let=stat["letters"]
         )
         print(info)
     elif command == "lines":
-        info = "Lines: {lin}".format(lin=stat["lines"])
+        info += "Lines: {lin}".format(lin=stat["lines"])
         print(info)
     elif command == "words":
-        info = "Words: {w}".format(w=stat["words"])
+        info += "Words: {w}".format(w=stat["words"])
         print(info)
     elif command == "letters":
-        info = "Letters: {l}".format(l=stat["letters"])
+        info += "Letters: {l}".format(l=stat["letters"])
         print(info)
     elif command == "word_frequency":
         cnt = 0
@@ -211,13 +209,15 @@ def show_silent(command, filname, num=7):
 
 def show_default(command, filname, num=7):
     """
-    The default display
+    The default display.
+    This displays the results if the user does not specify "--silent"
+    or "--verbose"
     @param command [all|lines|words|letters|word_frequency|letter_frequency]
     @param filname file to read data from
     @return Depending on the command, returns the required data
     """
-
-    info = "'{}' contains\n".format(filname[filname.rfind("/") + 1:])
+    fname = filname[filname.rfind("/") + 1:]
+    info = "'{}' contains\n".format(fname)
     stat = file_stats(filname)
     if command == "all":
         info += "Characters: {c}\nLetters: {let}\nWords: {w}\nLines: {lin}".format(
@@ -240,7 +240,7 @@ def show_default(command, filname, num=7):
         cnt = 0
         word_dict = word_count(filname)
 
-        print("The {n} most frequent words in the file..".format(n=num))
+        print("The {n} most frequent words in '{f}' are".format(n=num, f=fname))
         print("{:<10} {:>8}".format("words", "frequency"))
         print("-" * 20)
 
@@ -255,7 +255,7 @@ def show_default(command, filname, num=7):
         cnt = 0
         let_dict = letter_count(filname)
 
-        print("The {n} most frequent letters in the file..".format(n=num))
+        print("The {n} most frequent letters in '{f}'..".format(n=num, f=fname))
         print("{:<10} {:>8}".format("letter", "frequency"))
         print("-" * 20)
 
